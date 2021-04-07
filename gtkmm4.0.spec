@@ -3,7 +3,7 @@
 %define _disable_lto 1
 
 %define pkgname	gtkmm
-%define api	3.0
+%define api	4.0
 %define major	1
 %define libname %mklibname %{pkgname} %{api} %{major}
 %define libgdkmm %mklibname gdkmm %{api} %{major}
@@ -11,7 +11,7 @@
 
 Summary:	C++ interface for popular GUI library gtk+
 Name:		%{pkgname}%{api}
-Version:	3.24.4
+Version:	4.0.1
 Release:	1
 #gw lib is LGPL, tool is GPL
 License:	LGPLv2+ and GPLv2+
@@ -20,14 +20,16 @@ Url:		http://gtkmm.sourceforge.net/
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/gtkmm/%{url_ver}/%{pkgname}-%{version}.tar.xz
 
 BuildRequires:	meson
+BuildRequires:  cmake
 BuildRequires:	doxygen
 BuildRequires:	xsltproc
-BuildRequires:	pkgconfig(atkmm-1.6)
-BuildRequires:	pkgconfig(cairomm-1.0)
+BuildRequires:	pkgconfig(atkmm-2.36)
+BuildRequires:	pkgconfig(cairomm-1.16)
 BuildRequires:	pkgconfig(gdk-pixbuf-2.0)
-BuildRequires:	pkgconfig(giomm-2.4)
-BuildRequires:	pkgconfig(gtk+-3.0)
-BuildRequires:	pkgconfig(pangomm-1.4)
+BuildRequires:	pkgconfig(glibmm-2.68)
+BuildRequires:	pkgconfig(gtk4)
+BuildRequires:	pkgconfig(pangomm-2.48)
+
 
 %description
 Gtkmm provides a C++ interface to the GTK+ GUI library. Gtkmm2 wraps GTK+ 2.
