@@ -4,7 +4,7 @@
 
 %define pkgname	gtkmm
 %define api	4.0
-%define major	1
+%define major	0
 %define libname %mklibname %{pkgname} %{api} %{major}
 %define libgdkmm %mklibname gdkmm %{api} %{major}
 %define devname %mklibname -d %{pkgname} %{api}
