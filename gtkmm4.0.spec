@@ -85,7 +85,7 @@ when trying to develop or compile applications which need %{pkgname}.
 %meson_install
 
 %files -n %{libgdkmm}
-%{_libdir}/libgdkmm-%{api}.so.%{major}*
+#{_libdir}/libgdkmm-%{api}.so.%{major}*
 
 %files -n %{libname}
 %{_libdir}/libgtkmm-%{api}.so.%{major}*
