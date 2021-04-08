@@ -51,21 +51,10 @@ quickly create complex user interfaces.
 This package contains the library needed to run programs dynamically
 linked with %{pkgname}.
 
-%package	-n %{libgdkmm}
-Summary:	C++ interface for popular GUI library gtk+
-Group:		System/Libraries
-Provides:	%{pkgname}%{api} = %{version}-%{release}
-Conflicts:	%{_lib}gtkmm3.0_1 < 3.4.2-2
-
-%description	-n %{libgdkmm}
-This package contains the library needed to run programs dynamically
-linked with %{pkgname}.
-
 %package	-n %{devname}
 Summary:	Headers and development files of %{pkgname}
 Group:		Development/GNOME and GTK+
 Requires:	%{libname} = %{version}-%{release}
-Requires:	%{libgdkmm} = %{version}-%{release}
 Provides:	%{name}-devel = %{version}-%{release}
 Obsoletes:	%{name}-doc < 3.4.2-2
 
@@ -84,9 +73,6 @@ when trying to develop or compile applications which need %{pkgname}.
 %install
 %meson_install
 
-%files -n %{libgdkmm}
-#{_libdir}/libgdkmm-%{api}.so.%{major}*
-
 %files -n %{libname}
 %{_libdir}/libgtkmm-%{api}.so.%{major}*
 
@@ -95,5 +81,4 @@ when trying to develop or compile applications which need %{pkgname}.
 %{_includedir}/*
 %{_libdir}/*.so
 %{_libdir}/gtkmm-%{api}
-%{_libdir}/gdkmm-%{api}
 %{_libdir}/pkgconfig/*.pc
