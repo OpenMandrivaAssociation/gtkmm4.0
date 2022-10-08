@@ -11,7 +11,7 @@
 
 Summary:	C++ interface for popular GUI library gtk+
 Name:		%{pkgname}%{api}
-Version:	4.6.1
+Version:	4.8.0
 Release:	1
 #gw lib is LGPL, tool is GPL
 License:	LGPLv2+ and GPLv2+
@@ -77,7 +77,7 @@ when trying to develop or compile applications which need %{pkgname}.
 %{_libdir}/libgtkmm-%{api}.so.%{major}*
 
 %files -n %{devname}
-%doc AUTHORS COPYING NEWS README ChangeLog
+%doc AUTHORS COPYING NEWS README* ChangeLog
 %{_includedir}/*
 %{_libdir}/*.so
 %{_libdir}/gtkmm-%{api}
