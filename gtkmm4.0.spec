@@ -29,6 +29,7 @@ BuildRequires:	pkgconfig(gdk-pixbuf-2.0)
 BuildRequires:	pkgconfig(glibmm-2.68)
 BuildRequires:	pkgconfig(gtk4)
 BuildRequires:	pkgconfig(pangomm-2.48)
+BuildRequires:  pkgconfig(epoxy)
 
 
 %description
