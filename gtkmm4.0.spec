@@ -1,6 +1,6 @@
 %define url_ver %(echo %{version}|cut -d. -f1,2)
 %define _disable_rebuild_configure 1
-%define _disable_lto 1
+#define _disable_lto 1
 
 %define pkgname	gtkmm
 %define api	4.0
